@@ -1,0 +1,9 @@
+= API Overview
+
+== Base URL
+
+The base URL for accessing the API is: https://api.example.com
+
+== General Information
+
+This API provides comprehensive access to our application data and functionality. It supports a variety of operations to allow users to manage their resources effectively.
