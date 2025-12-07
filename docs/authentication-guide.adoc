@@ -1,0 +1,51 @@
+= API Authentication Guide
+
+== Introduction
+
+This guide covers various authentication methods and how to set up tokens for secure communication with our API.
+
+== Authentication Methods
+
+=== Basic Authentication
+Username and password sent with each request. Simple but less secure for production environments.
+
+=== API Key Authentication
+A unique key provided by the API provider sent with requests in headers or query parameters.
+
+=== OAuth 2.0
+A modern, secure method that allows token-based access without sharing credentials. Users authorize access through a third-party service.
+
+=== JWT (JSON Web Tokens)
+Tokens that contain encoded information and are signed for verification. Commonly used for stateless authentication.
+
+=== Bearer Token
+Authorization header format using token-based authentication:
+
+[source,bash]
+----
+Authorization: Bearer YOUR_API_TOKEN
+----
+
+== Token Setup
+
+=== Generating API Tokens
+
+. Log into your account on the API provider's website
+. Navigate to the API or Settings section
+. Look for the option to generate a new API token
+. Follow the prompts and save the token securely
+. Never share your token in public repositories or client-side code
+
+=== Using API Tokens
+
+. Include the token in your API requests as specified in the documentation
+. Add it to the Authorization header as a Bearer token
+. Test the token using a REST client like Postman before integration
+
+== Security Best Practices
+
+* Keep tokens secure and never expose them in public repositories
+* Regularly rotate your tokens to maintain security
+* Use environment variables to store sensitive tokens
+* Implement token expiration and refresh mechanisms
+* Monitor token usage for suspicious activity
